@@ -2,6 +2,7 @@
 
 
 
+
 # def index(request):
 #
 #     return HttpResponse(" <h1> Hello Gaurav kse ho yar  how to prepare your python </h1>")
@@ -10,13 +11,26 @@
 #     return HttpResponse("it is our web page . you surfing any time here ")
 
 from django.http import HttpResponse
+from django.shortcuts import render # ye templates k liye import kiya h
 
 
-def url(request):
-    return HttpResponse('''<h1>         My all five links that i use mostly     </h1><a  
-    href="https://www.youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9"> <h1>Dhango play list link</h1></a><a  
-    href="https://www.youtube.com/playlist?list=PLu0W_9lII9ahfRrhFcoB-4lpp9YaBmdCP"> <h1> Python oops playlist link</h1></a><a  
-    href="https://www.youtube.com/playlist?list=PL0b6OzIxLPbzf12lu5etX_vjN-eUxgxnr"> <h1> my sql  playlist link</h1></a><a  
-    href="https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME"> <h1> my fav PYTHON playlist link</h1></a><a  
-    href="https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP"> <h1> My javascript playlist link</h1></a>''')
+def index(request):
+    return render(request, 'index.html')
 
+
+    # return HttpResponse("<h1>Home</h1>")
+
+def removepunc(request):
+    return render(request, 'removepunc.html')
+    # return HttpResponse("<h1>remove punc</h1>")
+
+def capitalizefirst(request):
+    return HttpResponse("<a href = '/' back> </a>")
+
+def newlineremove(request):
+    return HttpResponse("<h1>newlineremove</h1>")
+
+def spaceremover(request):
+    return HttpResponse("<h1>spaceremover</h1>")
+def charcount(request):
+    return HttpResponse("<h1>charcount</h1>")

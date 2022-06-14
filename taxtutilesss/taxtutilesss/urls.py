@@ -13,12 +13,26 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+"""hmne ye pipeline dal di nye nye nam se or inhe check kr liya ye sari ok h """
+
+
+
 from django.contrib import admin
 from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('url/', views.url,name='url'),
+    path('',views.index,name='index'),
+    path('removepunc/',views.removepunc,name='remove punc'),
+    path('capitalizefirst/',views.capitalizefirst,name='capitalizefirst'),
+    path('newlineremove/',views.newlineremove,name='newlineremove'),
+    path('spaceremover/',views.spaceremover,name='spaceremover'),
+    path('charcount/',views.charcount,name='charcount'),
+
+
+
+
 
 
 ]
